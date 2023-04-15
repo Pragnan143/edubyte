@@ -6,20 +6,20 @@ const registerPage = () => {
       <input
         type="text"
         placeholder="Your Name Buddy..."
-        className="border-b-2 font-normal  w-64 p-1 outline-none  hover:font-medium "
+        className="border-b-2 font-light mt-2 w-64 p-1 outline-none   "
       />
       <input
         type="email"
         placeholder="Email..."
-        className="border-b-2 font-normal  w-64 p-1 outline-none  hover:font-medium "
+        className="border-b-2 font-light  w-64 p-1 outline-none   "
       />
       <input
         type="password"
         placeholder="Password Dude..."
-        className="  border-b-2 outline-none w-64 p-0 font-normal hover:font-medium"
+        className="  border-b-2 outline-none w-64 p-0 font-light "
       />
       <button className="rounded-full bg-color5 text-white w-40 p-2 justify-center hover:bg-lime-800">
-        Sign In
+        Sign Up
       </button>
     </div>
   );
