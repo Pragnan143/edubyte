@@ -21,7 +21,7 @@ const SignUpPage = () => {
         placeholder="Password Dude..."
         className="  border-b-2 outline-none w-[26rem] p-1 font-light "
       />
-      <button className="absolute  bottom-0 rounded-lg bg-lime-800 text-white h-37 w-[26rem] p-2 items-center justify-center hover:bg-color5">
+      <button className="absolute h-35  w-[26rem] bottom-0 rounded-lg bg-lime-800 text-white  p-2 justify-center hover:bg-color5">
         Sign Up
       </button>
     </div>
