@@ -1,8 +1,8 @@
-import RegisterPage from "./components/Register.js";
+import Auth from "./components/Auth";
 const App = () => {
   return (
     <div className="App">
-      <RegisterPage />
+      <Auth />
     </div>
   );
 };
