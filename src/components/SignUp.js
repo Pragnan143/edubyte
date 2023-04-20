@@ -1,4 +1,5 @@
 import React from "react";
+import CloseIcon from "@mui/icons-material/Close";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 const SignUpPage = () => {
@@ -45,16 +46,20 @@ const SignUpPage = () => {
         <Modal
           open={open}
           onClose={onCloseModal}
-          classNames={"rounded-lg"}
-          styles={{ BorderRadius: "20px !important" }}
+          className={" relative"}
           center
         >
+          <div className="absolute top-4 right-4 z-50 bg-red-800 rounded-full h-6 w-6   flex  justify-center items-center">
+            <CloseIcon className="text-white" />
+          </div>
+
           <div
-            className="h-[12rem] p-10 w-[34rem]  gap-2 rounded-lg justify-center flex-col
+            className="h-[12rem] p-10 w-[20rem] lg:w-[34rem]  gap-2 rounded-lg justify-center flex-col
              items-center  flex"
           >
             <input
               type="number"
+              maxLength={10}
               className="border-solid  border-b-2 w-[20rem]  border-gray-200 outline-none "
               placeholder="Phone"
             />
