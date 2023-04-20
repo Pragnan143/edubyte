@@ -15,17 +15,20 @@ const Sidebar = () => {
         <h1 className="text-2xl ">Hi, Bhanu Prakash</h1>
       </div>
       <div className="mt-[2rem]">
-        <div className="flex items-center  justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem] bg-slate-200">
+        <div className="flex items-center  justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem] hover:bg-slate-200">
           <LaptopIcon /> All Programs
         </div>
-        <div className="flex items-center justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem] bg-slate-200 ">
+        <div className="flex items-center justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem] hover:bg-slate-200 ">
           <LibraryBooksOutlinedIcon /> OneByte
         </div>
-        <div className="flex items-center justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem]  bg-slate-200">
+        <div className="flex items-center justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem]  hover:bg-slate-200 animate-pulse duration-75">
           <WorkOutlineOutlinedIcon />
           Internships
         </div>
-        <div className="flex items-center justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem]  bg-slate-200 ">
+        <div className="flex items-center justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem] hover:bg-slate-200 ">
+          <LibraryBooksOutlinedIcon /> Certificates
+        </div>
+        <div className="flex items-center justify-start  gap-5 px-4 cursor-pointer h-[4rem] w-[16rem] hover:bg-slate-200 ">
           <LogOutIcon /> Logout
         </div>
       </div>

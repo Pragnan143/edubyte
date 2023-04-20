@@ -1,10 +1,19 @@
-// import Auth from "./components/Auth";
+import NoMatch from "./NoMatch";
+import Auth from "./components/Auth";
 import Dashbord from "./components/Dashbord";
 import "./style.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
     <div className="App">
-      <Dashbord />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Auth />}>
+            <Route path="contact" element={<Dashbord />} />
+            <Route path="*" element={<NoMatch />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

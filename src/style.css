@@ -2,3 +2,10 @@ button:disabled{
     background-color: rgba(77, 106, 77, 0.79);
     cursor:not-allowed;
 }
+
+input::-webkit-inner-spin-button {
+    display: none;
+  }
+.obox{
+    border: 1px solid rgb(217, 199, 199);
+} 

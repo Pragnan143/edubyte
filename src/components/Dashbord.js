@@ -20,7 +20,7 @@ const Dashbord = () => {
               }
               className="font-semibold h-[3rem]  w-[32rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
             >
-              Sign In
+              Enrolled Programs
             </div>
             <div
               onClick={() => setMode("avaliable")}
@@ -31,10 +31,12 @@ const Dashbord = () => {
               }
               className="font-semibold h-[3rem] w-[32rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
             >
-              Sign Up
+              Avaliable
             </div>
           </div>
-          <div className="h-full flex flex-wrap gap-[12rem] justify-center py-20 ">
+          <div className="h-full flex flex-wrap gap-[4rem] justify-center py-20 ">
+            <CourseCard />
+            <CourseCard />
             <CourseCard />
             <CourseCard />
             <CourseCard />
