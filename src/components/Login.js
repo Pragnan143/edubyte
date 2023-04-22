@@ -1,14 +1,23 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 const Login = () => {
   const [loading, setLoading] = React.useState(false);
-  const submit = (e) => {
+  const [uname, setUname] = useState("");
+  const [pass, setPass] = useState("");
+  const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    try {
+      const res = await axios.post(
+        "https://edubite-course-backend.vercel.app/user/login",
+        { email: uname, password: pass }
+      );
+      console.warn(res);
+    } catch {
+      console.log("Login Failed");
+    }
+    setLoading(false);
   };
   return (
     <form
@@ -22,12 +31,14 @@ const Login = () => {
       <input
         required
         type="email"
+        onChange={(e) => setUname(e.target.value)}
         placeholder="Email..."
         className="border-b-2 font-light h-35  w-[18rem] lg:w-[20rem] px-4 py-2 outline-none "
       />
       <input
         required
         min={6}
+        onChange={(e) => setPass(e.target.value)}
         type="password"
         placeholder="Password Dude..."
         className="  border-b-2 outline-none  w-[18rem] h-35  lg:w-[20rem] px-4 py-2 font-light "
