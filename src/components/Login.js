@@ -13,7 +13,7 @@ const Login = () => {
         "https://edubite-course-backend.vercel.app/user/login",
         { email: uname, password: pass }
       );
-      console.warn(res);
+      console.log(res.data)
     } catch {
       console.log("Login Failed");
     }
@@ -33,7 +33,7 @@ const Login = () => {
         type="email"
         onChange={(e) => setUname(e.target.value)}
         placeholder="Email..."
-        className="border-b-2 font-light h-35  w-[18rem] lg:w-[20rem] px-4 py-2 outline-none "
+        className="border-b-2 font-light h-35  w-[130%] lg:w-[20rem] px-4 py-2 outline-none "
       />
       <input
         required
@@ -41,13 +41,13 @@ const Login = () => {
         onChange={(e) => setPass(e.target.value)}
         type="password"
         placeholder="Password Dude..."
-        className="  border-b-2 outline-none  w-[18rem] h-35  lg:w-[20rem] px-4 py-2 font-light "
+        className="  border-b-2 outline-none  w-[130%] h-35  lg:w-[20rem] px-4 py-2 font-light "
       />
 
       <button
         type="submit"
         disabled={loading ? true : false}
-        className="absolute h-35  w-[18rem] lg:w-[20rem] bottom-5   lg:bottom-0 rounded-lg bg-lime-800 text-white  p-2 justify-center "
+        className="absolute h-35  w-[130%] lg:w-[20rem] bottom-5   lg:bottom-0 rounded-lg bg-lime-800 text-white  p-2 justify-center "
       >
         Sign In
       </button>

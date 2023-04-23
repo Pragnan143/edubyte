@@ -15,7 +15,7 @@ const Auth = () => {
                 ? { backgroundColor: "white" }
                 : { backgroundColor: "transparent" }
             }
-            className="font-semibold   w-[12rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
+            className="font-semibold   w-[100%] bg-white py-1 px-2 flex items-center rounded-lg    justify-center cursor-pointer text-[#4B4444]    "
           >
             Sign In
           </div>
@@ -26,7 +26,7 @@ const Auth = () => {
                 ? { backgroundColor: "white" }
                 : { backgroundColor: "transparent" }
             }
-            className="font-semibold   w-[12rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
+            className="font-semibold   w-[100%] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
           >
             Sign Up
           </div>
