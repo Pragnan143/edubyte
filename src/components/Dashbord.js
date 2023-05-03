@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import CourseCard from "./CourseCard";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Dashbord = () => {
+  const [courses,setCourses]=useState([]);
+  const [ecourses,setEcourses]=useState([]);
   const [mode, setMode] = useState("enrolled");
-
+  const navigate = useNavigate();
+  useEffect(()=>{
+    axios.get("https://edubite-course-backend.vercel.app/courses/all_courses")
+      .then((r)=>setCourses(r.data))
+    const token = localStorage.getItem('token')
+    if(!token){
+      navigate("/auth")
+    }else{
+      axios.get("https://edubite-course-backend.vercel.app/user/course/enrolled",{headers:{"x-access-token":token}})
+      .then((r)=>setEcourses(r.data))
+      .catch((e)=>console.log(e))
+    }
+  },[])
   return (
     <div>
       <Sidebar />
@@ -35,12 +51,18 @@ const Dashbord = () => {
             </div>
           </div>
           <div className="h-full flex flex-wrap gap-[4rem] justify-center py-20 ">
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
+              {
+                (mode === "avaliable" ? 
+                courses.map((i)=>{
+                  return(
+                    <CourseCard props={i} c="normal"/>
+                  )
+                }) : ecourses.map((i)=>{
+                  return(
+                    <CourseCard props={i} c="enrolled"/>
+                  )
+                }))
+              }
           </div>
         </div>
       </div>

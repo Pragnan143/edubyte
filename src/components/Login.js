@@ -1,10 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [loading, setLoading] = React.useState(false);
   const [uname, setUname] = useState("");
   const [pass, setPass] = useState("");
+   const navigate = useNavigate();
+
   const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -13,8 +16,12 @@ const Login = () => {
         "https://edubite-course-backend.vercel.app/user/login",
         { email: uname, password: pass }
       );
-      console.log(res.data)
-    } catch {
+      if(res.data.auth){
+          localStorage.setItem("token",res.data.token)
+          navigate("/dashboard")
+      }
+    } catch (e){
+      console.log(e)
       console.log("Login Failed");
     }
     setLoading(false);

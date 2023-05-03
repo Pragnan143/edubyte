@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import Signup from "./SignUp";
 const Auth = () => {
   const [mode, setMode] = useState("login");
-
+  const navigate = useNavigate();
+  useEffect(()=>{
+    if(localStorage.getItem("token")){
+      navigate('/dashboard')
+    }
+  },[])
   return (
     <div className="m-0 p-10 bg-color4 h-screen	w-full flex items-center justify-center ">
       <div className=" bg-white sm:w-[16rem] lg:h-[34rem] lg:w-[24rem]   rounded-xl flex flex-col overflow-hidden">
