@@ -5,6 +5,7 @@ import "./style.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StrictMode } from "react";
 import Coursepage from "./components/Coursepage";
+import Schedule from "./components/Schedule";
 const App = () => {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashbord />} />
             <Route path="/course/:id" element={<Coursepage />} />
+            <Route path="/enrolled/:id" element={<Schedule />} />
             <Route path="/*" element={<NoMatch />} />
           </Routes>
         </BrowserRouter>
