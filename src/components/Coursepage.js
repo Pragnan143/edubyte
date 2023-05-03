@@ -8,13 +8,15 @@ import Head_phone from "../assets/head_phone.svg";
 import Key from "../assets/key.svg";
 import Lamp_duotone_line from "../assets/Lamp_duotone_line.svg";
 import Time_duotone from "../assets/Time_duotone.svg";
-import Tick from "../assets/Tick.svg"
-import { useLocation } from 'react-router-dom'
+import Tick from "../assets/Tick.svg";
+import { useLocation } from "react-router-dom";
 import Projects from "./Projects";
+import { useNavigate } from "react-router-dom";
 
 
 function Coursepage() {
   // const router = useRouter();
+  const navigate = useNavigate();
 
   var dsa_c = {
     _id: "644e174ccf914bb8916e832b",
@@ -198,22 +200,33 @@ function Coursepage() {
   };
 
   // const [course, setCourse] = useState({});
-  var course={}
+  var course = {};
   const location = useLocation();
   console.log();
   // useEffect(() => {
-    if (location.pathname.split("/")[2] === "644e174ccf914bb8916e832b") {
-      course=dsa_c
-    } else {
-      course=full_c;
-    }
+  if (location.pathname.split("/")[2] === "644e174ccf914bb8916e832b") {
+    course = dsa_c;
+  } else {
+    course = full_c;
+  }
   // }, []);
   console.log(course);
 
-  function enroller(){
-    alert(localStorage.getItem("token"))
-    alert(course._id)
-    axios.post(`/enrollement/${course._id}`)
+  async function enroller() {
+    if(!localStorage.getItem("token")){
+      navigate('/auth')
+
+    }
+    // alert(course._id);
+    try {
+      var res=await axios
+        .get(
+          `http://localhost:5000/user/course/enrollement/${course._id}`, { headers: {"x-access-token" : `${localStorage.getItem("token")}`}}
+        )
+      console.log(res)
+    } catch (err) {
+      alert("Already enrolled ..");
+    }
   }
 
   return (
@@ -238,7 +251,10 @@ function Coursepage() {
                 {/* <div className="flex items-center cursor-pointer justify-center h-[3.5rem] w-[90%] lg:w-[12rem] border-solid rounded-full border-2 border-black">
                   Download Syllubus
                 </div> */}
-                <div onClick={()=>enroller()} className="flex items-center cursor-pointer justify-center h-[3.5rem] w-[90%] lg:w-[8rem] font-bold rounded-full text-white bg-violet-900">
+                <div
+                  onClick={() => enroller()}
+                  className="flex items-center cursor-pointer justify-center h-[3.5rem] w-[90%] lg:w-[8rem] font-bold rounded-full text-white bg-violet-900"
+                >
                   Enroll Now
                 </div>
               </div>
@@ -246,9 +262,8 @@ function Coursepage() {
             <div className="flex items-center justify-center h-full w-full  lg:px-10 lg:w-[35rem] lg:h-[45rem]">
               <img
                 className="lg:h-[25rem]  h-[90%] w-[90%] object-fit rounded-lg"
-                src={require("../assets/"+course.img)}
+                src={require("../assets/" + course.img)}
                 alt={course.name}
-
               />
             </div>
           </div>
@@ -322,12 +337,12 @@ function Coursepage() {
             id="learnsec"
           >
             {course.learn.map((i) => {
-              return <div className="flex mx-4 gap-5 h-[5.8rem] w-[23rem] ">
-              <img src={Tick} className="h-6 w-6" alt="" />
-              <p className="font-light text-md leading-6 ">
-                {i}
-              </p>
-            </div>;
+              return (
+                <div className="flex mx-4 gap-5 h-[5.8rem] w-[23rem] ">
+                  <img src={Tick} className="h-6 w-6" alt="" />
+                  <p className="font-light text-md leading-6 ">{i}</p>
+                </div>
+              );
             })}
           </div>
         </div>
@@ -343,7 +358,7 @@ function Coursepage() {
             className="flex flex-col gap-4 min-h-[42rem] lg:w-[50vw] "
             id="coursecontainer"
           >
-            <Syllabus data={course.syllabus}/>
+            <Syllabus data={course.syllabus} />
           </div>
           <div className="flex flex-col items-center mx-7 p-6 gap-4 lg:h-[45rem] border-2 border-gray-200 rounded-lg w-[85vw] lg:w-[26rem]">
             <div className="price">
@@ -382,7 +397,10 @@ function Coursepage() {
               <img src="Tick.svg" alt="" />
               <p>Resume building and more career support.</p>
             </div>
-            <div className="flex items-center justify-center h-[3.5rem]  w-[95%] lg:w-[24rem] rounded-full bg-violet-700 font-bold cursor-pointer text-white">
+            <div
+              onClick={() => enroller()}
+              className="flex items-center justify-center h-[3.5rem]  w-[95%] lg:w-[24rem] rounded-full bg-violet-700 font-bold cursor-pointer text-white"
+            >
               Enroll Now
             </div>
           </div>
@@ -405,8 +423,8 @@ function Coursepage() {
           and build skills that translate into career growth and success.
         </p>
         <div className="container_project flex flex-wrap gap-5 ">
-        {course.projects.map((i) => {
-            return (<Projects project={i}/>);
+          {course.projects.map((i) => {
+            return <Projects project={i} />;
           })}
         </div>
       </section>

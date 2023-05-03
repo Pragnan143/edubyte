@@ -2,16 +2,18 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const CourseCard = (props, e) => {
+const CourseCard = (props, c) => {
   const navigate = useNavigate();
+
   function reshit(id) {
-    if (e === "enrolled") {
+    if (c === "enrolled") {
       axios.get(`https://edubite-course-backend.vercel.app/user/login`);
     } else {
         navigate('/course/'+id)
         // console.log(id)
     }
   }
+  console.log(props)
   return (
     <div
       onClick={() => reshit(props.props._id)}
