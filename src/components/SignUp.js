@@ -41,9 +41,9 @@ const SignUpPage = () => {
       <button
         type="button"
         onClick={onOpenModal}
-        className="absolute h-35 w-[18rem]  lg:w-[20rem] bottom-5 lg:bottom-0 rounded-lg bg-lime-800 text-white  p-2 justify-center "
+        className="absolute h-35  w-[130%] lg:w-[20rem] bottom-5   lg:bottom-0 rounded-lg bg-lime-800 text-white  p-2 justify-center"
       >
-        <Modal
+        {/* <Modal
           open={open}
           onClose={onCloseModal}
           className={" relative"}
@@ -93,12 +93,12 @@ const SignUpPage = () => {
             <button
               type="button"
               onClick={onOpenModal}
-              className="absolute h-35 w-[90%]  lg:w-[20rem] bottom-5 lg:bottom- rounded-lg bg-lime-800 text-white  p-2 justify-center "
+              className="absolute h-35  w-[130%] lg:w-[20rem] bottom-5   lg:bottom-0 rounded-lg bg-lime-800 text-white  p-2 justify-center"
             >
               Verify
             </button>
           </div>
-        </Modal>
+        </Modal> */}
         Sign Up
       </button>
     </form>

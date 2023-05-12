@@ -32,10 +32,10 @@ const Syllabus = (props) => {
     active === index ? setActive(null) : setActive(index);
   };
   return (
-    <div className="mt-10 flex flex-col gap-5 ">
+    <div className="mt-10 flex flex-col gap-5 w-full">
       {props.data.map((item, index) => {
         return (
-          <div className="cursor-pointer  transistion  duration-1000  flex flex-col gap-2.5 p-5 border-gray-200 border rounded-lg  max-h-auto bg-violet-100 w-full">
+          <div className="cursor-pointer  transistion  duration-1000  flex flex-col gap-2.5 p-5 border-gray-200 border rounded-lg  max-h-auto bg-violet-100 w-[60vw]">
             <button
               className={
                 active === index
@@ -51,8 +51,8 @@ const Syllabus = (props) => {
               onClick={() => handleToggle(index)}
               className={
                 active !== index
-                  ? "invisible max-h-0"
-                  : "py-5 text-gray-600 flex flex-col  leading-10  font-normal text-sm lg:text-md  overflow-hidden "
+                  ? "invisible max-h-0  "
+                  : "py-5 text-gray-600 flex flex-col   transistion  duration-100   leading-10  font-normal text-sm lg:text-md  overflow-hidden "
               }
             >
               {item.dis}
@@ -63,7 +63,7 @@ const Syllabus = (props) => {
                 className={
                   active !== index
                     ? "invisible max-h-0"
-                    : "py-1 text-gray-600 flex flex-col  gap-5  leading-10  font-normal text-sm lg:text-md  overflow-hidden "
+                    : "py-1 text-gray-600 flex flex-col  gap-5 transistion  duration-100 leading-10  font-normal text-sm lg:text-md  overflow-hidden "
                 }
               >
                 {item.concepts.map((j) => {

@@ -231,7 +231,7 @@ function Coursepage() {
 
   return (
     <div className="w-[100vw] flex justify-center items-center flex-col">
-      <section className=" flex lg:h-[60rem] lg:w-[81.5rem]   rounded-lg  lg:my-16 bg-violet-100">
+      <section className=" flex lg:h-[60rem] lg:w-[81.5rem]   rounded-lg hero_sec  lg:my-16 bg-violet-100">
         <div className="flex flex-col">
           <div className="flex flex-col-reverse mt-16 lg:flex-row lg: lg:mt-6">
             <div className="flex flex-col lg:w-[45rem] p-7 gap-[4rem]">
@@ -259,7 +259,7 @@ function Coursepage() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center h-full w-full  lg:px-10 lg:w-[35rem] lg:h-[45rem]">
+            <div className="flex items-center justify-center h-full w-full lg:px-10 lg:w-[35rem] lg:h-[45rem]">
               <img
                 className="lg:h-[25rem]  h-[90%] w-[90%] object-fit rounded-lg"
                 src={require("../assets/" + course.img)}
@@ -267,7 +267,7 @@ function Coursepage() {
               />
             </div>
           </div>
-          <div className="flex flex-col lg:justify-center lg:flex-row  bg-white h-auto lg:h-[15rem] lg:w-[81.5rem] w-[100vw] border-2 border-violet-200">
+          <div className="flex flex-col lg:justify-center lg:flex-row  bg-white h-auto lg:h-[15rem] lg:w-[90vw] w-[100vw] border-2 border-violet-200">
             <div className="flex flex-col gap-5 lg:h-[0rem] w-1/2 p-10">
               <h1 className="font-bold text-2xl w-[15rem] ">
                 Available Batches
@@ -289,14 +289,6 @@ function Coursepage() {
                   {course.duration}
                 </p>
               </div>
-              {/* <div className="flex gap-4 h-[3rem] w-full lg:w-[12rem] flex gap-2 items-center font-light">
-                <img
-                  src="Video_file_duotone.svg"
-                  alt=""
-                  className="h-5 w-5"
-                />
-                <p className="text-violet-900">250 videos</p>
-              </div> */}
               <div className="flex gap-4 h-[3rem] w-full lg:w-[12rem] flex gap-2 items-center font-light">
                 <img src={Lamp_duotone_line} alt="" className="h-5 w-5" />
                 <p className="text-violet-900" id="projects">
@@ -347,7 +339,7 @@ function Coursepage() {
           </div>
         </div>
       </section>
-      <section className=" lg:mx-32 flex flex-col  lg:justify-none w-[100vw] lg:w-[75rem] ">
+      <section className=" lg:mx-32 flex flex-col  lg:justify-none w-[100vw] lg:w-[90vw]">
         <div className=" flex items-center lg:items-baseline lg:justify-between w-full lg:w-[48rem]">
           <h1 className="font-bold text-4xl   px-9 text-violet-900">
             Course Syllubus
@@ -418,7 +410,7 @@ function Coursepage() {
         <br />
         <p className="lg:font-light font-normal text-gray-600 lg:text-lg lg:mb-8 text-sm">
           Recruiters too, look for real-project experience when hiring
-          developers and here at DevTown, we strive to provide just that. We
+          developers and here at Skill for you, we strive to provide just that. We
           empower developers with high quality applied learning opportunities
           and build skills that translate into career growth and success.
         </p>

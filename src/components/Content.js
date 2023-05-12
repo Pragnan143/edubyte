@@ -37,7 +37,7 @@ const Content = () => {
           <div className='mt-10 flex flex-col gap-5'>
             {FaqData.map((item, index) => {
               return (
-                <div className='cursor-pointer flex flex-col justify-center rounded-lg p-2  w-[85vw] bg-violet-100'>
+                <div className='cursor-pointer flex flex-col justify-center rounded-lg p-2  w-[85vw] bg-violet-100' >
                       <button
                         className={
                           active === index
