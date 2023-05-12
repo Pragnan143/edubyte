@@ -35,7 +35,7 @@ const Syllabus = (props) => {
     <div className="mt-10 flex flex-col gap-5 w-full">
       {props.data.map((item, index) => {
         return (
-          <div className="cursor-pointer  transistion  duration-1000  flex flex-col gap-2.5 p-5 border-gray-200 border rounded-lg  max-h-auto bg-violet-100 w-[60vw]">
+          <div className="cursor-pointer ml-8 lg:ml-0 transistion  duration-1000  flex flex-col gap-2.5 p-5 border-gray-200 border rounded-lg  max-h-auto bg-violet-100 w-[85vw] lg:w-[60vw]">
             <button
               className={
                 active === index

@@ -17,9 +17,9 @@ const CourseCard = (props, c) => {
   return (
     <div
       onClick={() => reshit(props.props._id)}
-      className="flex cursor-pointer flex-col mb-0 h-[15rem]  w-[20rem] rounded-lg overflow-hidden bg-gray-500"
+      className="flex cursor-pointer flex-col mb-0 h-[15rem] w-[18rem] lg:w-[20rem] rounded-lg overflow-hidden bg-gray-500"
     >
-      <image className=" h-3/4 w-[24rem] bg-black"></image>
+      <image className=" h-3/4 lg:w-[24rem] bg-black"></image>
       <h3 className="flex justify-center py-5 text-center">
         {props.props.name}
       </h3>

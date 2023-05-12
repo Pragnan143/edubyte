@@ -205,12 +205,14 @@ const Dashbord = () => {
     }
   }, []);
   return (
-    <div>
+    <div className="flex ">
       <Sidebar />
-      <div className="bg-color4 flex flex-col ml-[16rem] min-h-[100vh]">
-        <div className="flex flex-col items-center justify-center mt-12  h-max ">
-          <h1 className="text-bold text-4xl my-6">ALL PROGRAMS</h1>
-          <div className="h-[4rem] rounded-lg w-[70rem] mt-10  flex items-center gap-12 p-5 justify-center relative bg-gray-200 ">
+      <div className="bg-color4 flex flex-col  w-[86.22%] scroll-smooth  min-h-[100vh]">
+        <div className="flex flex-col items-center justify-center mt-12  lg:pl-0 h-max ">
+          <h1 className="font-bold lg:text-4xl lg:my-6 text-2xl ">
+            ALL PROGRAMS
+          </h1>
+          <div className="h-[4rem] transition delay-150  rounded-lg lg:w-[70rem] w-[18rem] z-1 mt-10  flex items-center lg:gap-12 p-5 justify-center relative bg-gray-200 ">
             <div
               onClick={() => setMode("enrolled")}
               style={
@@ -218,9 +220,9 @@ const Dashbord = () => {
                   ? { backgroundColor: "white" }
                   : { backgroundColor: "transparent" }
               }
-              className="font-semibold h-[3rem]  w-[32rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
+              className="font-semibold h-[3rem]  lg:w-[32rem] w-[33rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
             >
-              Enrolled Programs
+              Enrolled <p className="hidden lg:flex pl-2"> Programs</p>
             </div>
             <div
               onClick={() => setMode("avaliable")}
@@ -229,19 +231,19 @@ const Dashbord = () => {
                   ? { backgroundColor: "white" }
                   : { backgroundColor: "transparent" }
               }
-              className="font-semibold h-[3rem] w-[32rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
+              className="font-semibold h-[3rem] lg:w-[32rem] w-[33rem] bg-white py-1 px-2 flex items-center rounded-lg   justify-center cursor-pointer text-[#4B4444]    "
             >
               Avaliable
             </div>
           </div>
           <div className="h-full flex flex-wrap gap-[4rem] justify-center py-20 ">
-              {mode !== "enrolled" ? courses.map((i) => {
+            {mode !== "enrolled"
+              ? courses.map((i) => {
                   return <CourseCard props={i} c="normal" />;
-                }):
-                ecourses.map((i) => {
-                  return (i ? <CourseCard props={i} c="enrolled" />:null)
                 })
-              }
+              : ecourses.map((i) => {
+                  return i ? <CourseCard props={i} c="enrolled" /> : null;
+                })}
           </div>
         </div>
       </div>

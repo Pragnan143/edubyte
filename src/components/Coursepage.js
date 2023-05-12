@@ -13,7 +13,6 @@ import { useLocation } from "react-router-dom";
 import Projects from "./Projects";
 import { useNavigate } from "react-router-dom";
 
-
 function Coursepage() {
   // const router = useRouter();
   const navigate = useNavigate();
@@ -213,25 +212,24 @@ function Coursepage() {
   console.log(course);
 
   async function enroller() {
-    if(!localStorage.getItem("token")){
-      navigate('/auth')
-
+    if (!localStorage.getItem("token")) {
+      navigate("/auth");
     }
     // alert(course._id);
     try {
-      var res=await axios
-        .get(
-          `http://localhost:5000/user/course/enrollement/${course._id}`, { headers: {"x-access-token" : `${localStorage.getItem("token")}`}}
-        )
-      console.log(res)
+      var res = await axios.get(
+        `http://localhost:5000/user/course/enrollement/${course._id}`,
+        { headers: { "x-access-token": `${localStorage.getItem("token")}` } }
+      );
+      console.log(res);
     } catch (err) {
       alert("Already enrolled ..");
     }
   }
 
   return (
-    <div className="w-[100vw] flex justify-center items-center flex-col">
-      <section className=" flex lg:h-[60rem] lg:w-[81.5rem]   rounded-lg hero_sec  lg:my-16 bg-violet-100">
+    <div className="lg:mx-20 lg:w-[90vw] w-[100vw] flex justify-center items-center flex-col">
+      <section className=" flex lg:h-[60rem] lg:w-[81.5rem] rounded-lg hero_sec lg:my-16 bg-violet-100">
         <div className="flex flex-col">
           <div className="flex flex-col-reverse mt-16 lg:flex-row lg: lg:mt-6">
             <div className="flex flex-col lg:w-[45rem] p-7 gap-[4rem]">
@@ -279,23 +277,23 @@ function Coursepage() {
               </div>
             </div>
             <div className="flex items-center justify-center flex-wrap h-full lg:h-[6rem] lg:w-[38rem] mt-0 lg:mt-10 border-l-2 pl-3 py-5 border-gray-300">
-              <div className="flex h-[3rem]  w-full lg:w-[12rem] flex gap-2 items-center font-light">
+              <div className="flex h-[3rem]  w-full lg:w-[12rem]  gap-2 items-center font-light">
                 <img src={Book_duotone} alt="" className="h-5 w-5" />
                 <p className="text-violet-900">No Prerequisites</p>
               </div>
-              <div className="flex gap-4 h-[3rem] w-full lg:w-[12rem] flex gap-2 items-center font-light">
+              <div className=" gap-4 h-[3rem] w-full lg:w-[12rem] flex  items-center font-light">
                 <img src={Time_duotone} alt="" className="h-5 w-5" />
                 <p className="text-vioet-900" id="duration">
                   {course.duration}
                 </p>
               </div>
-              <div className="flex gap-4 h-[3rem] w-full lg:w-[12rem] flex gap-2 items-center font-light">
+              <div className=" gap-4 h-[3rem] w-full lg:w-[12rem] flex  items-center font-light">
                 <img src={Lamp_duotone_line} alt="" className="h-5 w-5" />
                 <p className="text-violet-900" id="projects">
                   {course.projects.length + 1} projects
                 </p>
               </div>
-              <div className="flex gap-4 h-[3rem] w-full lg:w-[12rem] w-full flex gap-2 items-center font-light">
+              <div className=" gap-4 h-[3rem] w-full lg:w-[12rem] flex  items-center font-light">
                 <img src={Book_duotone} alt="" className="h-5 w-5" />
                 <p className="text-violet-900 w-full">
                   Certificate of Completion
@@ -311,7 +309,7 @@ function Coursepage() {
         </h1>
         <div className=" ">
           <p
-            className="lg:text-left font-normal text-gray-600 text-md leading-8 lg:leading-10 pt-5 px-2 text-justify text-center"
+            className="lg:text-left font-normal text-gray-600 text-md leading-8 lg:leading-10 pt-5 px-2  text-center"
             id="abtcourse"
           >
             {course.atc}
@@ -323,7 +321,7 @@ function Coursepage() {
           </p>
         </div>
         <div className="flex flex-col gap-10 text-gray-600">
-          <h2 className="mt-10 text-2xl font-semibold">What you will Learn</h2>
+          <h2 className="mt-10 text-2xl font-semibold lg:mx-0 mx-auto">What you will Learn</h2>
           <div
             className="flex flex-wrap  h-auto w-[100%] lg:w-[50rem] "
             id="learnsec"
@@ -410,8 +408,8 @@ function Coursepage() {
         <br />
         <p className="lg:font-light font-normal text-gray-600 lg:text-lg lg:mb-8 text-sm">
           Recruiters too, look for real-project experience when hiring
-          developers and here at Skill for you, we strive to provide just that. We
-          empower developers with high quality applied learning opportunities
+          developers and here at Skill for you, we strive to provide just that.
+          We empower developers with high quality applied learning opportunities
           and build skills that translate into career growth and success.
         </p>
         <div className="container_project flex flex-wrap gap-5 ">
