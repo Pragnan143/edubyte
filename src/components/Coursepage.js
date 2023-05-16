@@ -265,7 +265,7 @@ function Coursepage() {
               />
             </div>
           </div>
-          <div className="flex flex-col lg:justify-center lg:flex-row  bg-white h-auto lg:h-[15rem] lg:w-[90vw] w-[100vw] border-2 border-violet-200">
+          <div className="flex flex-col lg:justify-center lg:flex-row  bg-white h-auto lg:h-[15rem] lg:w-[81.5rem] w-[100vw] border-2 border-violet-200">
             <div className="flex flex-col gap-5 lg:h-[0rem] w-1/2 p-10">
               <h1 className="font-bold text-2xl w-[15rem] ">
                 Available Batches
@@ -422,7 +422,7 @@ function Coursepage() {
         <h1 className="font-bold lg:text-5xl text-2xl text-center w-auto text-violet-900">
           Frequently Asked Questions
         </h1>
-        <div>
+        <div className="flex items-center justify-center">
           <Content />
         </div>
       </section>

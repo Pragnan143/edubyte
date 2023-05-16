@@ -30,7 +30,7 @@ const Checkoutpage = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center drop-shadow-xl rounded-md justify-center mx-auto  lg:ml-10  lg:my-auto flex-col bg-white  lg:w-[24rem] w-[21.25rem] h-[25rem] gap-10">
+        <div className="flex items-center drop-shadow-xl rounded-md justify-center mx-auto  lg:ml-10 lg:mt-40  flex-col bg-white  lg:w-[24rem] w-[21.25rem] h-[25rem] gap-10">
           <h4 className="font-semibold"> Checkout Details</h4>
           <div className="flex w-56 text-gray-400 justify-between gap-5">
             <h5 className=" font-normal ">Course Price -</h5>
