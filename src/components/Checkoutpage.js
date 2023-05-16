@@ -30,8 +30,8 @@ const Checkoutpage = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center drop-shadow-xl rounded-md justify-center mx-auto  lg:ml-10 lg:mt-40  flex-col bg-white  lg:w-[24rem] w-[21.25rem] h-[25rem] gap-10">
-          <h4 className="font-semibold"> Checkout Details</h4>
+        <div className="flex items-center drop-shadow-xl rounded-md justify-center mx-auto  lg:ml-10 lg:mt-40  flex-col bg-white  lg:w-[24rem] w-[21.25rem] h-[26rem] gap-7">
+          <h4 className="font-semibold mt-2"> Checkout Details</h4>
           <div className="flex w-56 text-gray-400 justify-between gap-5">
             <h5 className=" font-normal ">Course Price -</h5>
             <p>₹ 5000</p>
@@ -44,6 +44,14 @@ const Checkoutpage = () => {
           <div className="flex gap-5 w-[13.85rem]  justify-between">
             <h3 className="font-semibold text-gray-900">You Pay -</h3>
             <p>₹ 5000</p>
+          </div>
+          <div className="flex flex-col gap-2 w-[13.85rem] text-violet-500 ">
+            <p>Have a coupon code ?</p>
+            <input
+              type="text"
+              placeholder="Coupon Code "
+              className=" h-6 p-1 w-full font-light text-md text-black border-violet-200 border-2  "
+            />
           </div>
           <button className="w-[16rem] flex gap-5 items-center justify-center h-[3.5rem] rounded-md  bg-violet-800 ">
             <CreditCard /> Pay Now
