@@ -68,7 +68,7 @@ const Checkoutpage = () => {
           <hr className="text-gray-300 w-3/4"></hr>
           <div className="flex gap-5 w-[13.85rem]  justify-between">
             <h3 className="font-semibold text-gray-900">You Pay -</h3>
-            <p>₹{checker === "true" ? Calculator() : 5000}</p>
+            <p>₹{checker === "true" ? Calculator(5000) : 5000}</p>
           </div>
           <div className="flex flex-col gap-2 w-[13.85rem] text-violet-500 ">
             <p>Have a coupon code ?</p>
