@@ -272,7 +272,7 @@ function Coursepage() {
               </h1>
               <div className="flex flex-col p-0 lg:flex-row gap-10">
                 <div className="flex items-center font-bold justify-center h-[3.5rem] w-[10rem] text-normal border-2 border-violet-900 rounded-full text-violet-900 hover:shadow-xl">
-                  June 5,2023
+                  June 15,2023
                 </div>
               </div>
             </div>
@@ -321,7 +321,9 @@ function Coursepage() {
           </p>
         </div>
         <div className="flex flex-col gap-10 text-gray-600">
-          <h2 className="mt-10 text-2xl font-semibold lg:mx-0 mx-auto">What you will Learn</h2>
+          <h2 className="mt-10 text-2xl font-semibold lg:mx-0 mx-auto">
+            What you will Learn
+          </h2>
           <div
             className="flex flex-wrap  h-auto w-[100%] lg:w-[50rem] "
             id="learnsec"
@@ -343,7 +345,7 @@ function Coursepage() {
             Course Syllubus
           </h1>
         </div>
-        <div className="my-12 flex w flex-col gap-10 lg:flex-row justify-between ">
+        <div className="my-12 flex  flex-col gap-10 lg:flex-row justify-between ">
           <div
             className="flex flex-col gap-4 min-h-[42rem] lg:w-[50vw] "
             id="coursecontainer"

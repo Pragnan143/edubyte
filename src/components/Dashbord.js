@@ -205,14 +205,14 @@ const Dashbord = () => {
     }
   }, []);
   return (
-    <div className="flex ">
+    <div className=" ">
       <Sidebar />
-      <div className="bg-color4 flex flex-col  w-[86.22%] scroll-smooth  min-h-[100vh]">
+      <div className="bg-[#fff] flex flex-col  w-[100%] scroll-smooth  min-h-[100vh]">
         <div className="flex flex-col items-center justify-center mt-12  lg:pl-0 h-max ">
           <h1 className="font-bold lg:text-4xl lg:my-6 text-2xl ">
             ALL PROGRAMS
           </h1>
-          <div className="h-[4rem] transition delay-150  rounded-lg lg:w-[70rem] w-[18rem] z-1 mt-10  flex items-center lg:gap-12 p-5 justify-center relative bg-gray-200 ">
+          <div className="h-[4rem] transition delay-150  rounded-lg lg:w-[70rem] w-[18rem] z-1 mt-10 lg:ml-[16rem]  flex items-center lg:gap-12 p-5 justify-center relative bg-gray-200 ">
             <div
               onClick={() => setMode("enrolled")}
               style={

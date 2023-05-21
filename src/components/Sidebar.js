@@ -12,13 +12,13 @@ const Sidebar = () => {
     navigate("/auth");
   }
   return (
-    <div className=" flex flex-col   w-auto lg:w-1/6 bg-slate-500">
+    <div className=" flex flex-col fixed left-0 top-0 h-screen  w-auto lg:w-1/6 bg-[#B2A4FF]">
       <div className="flex flex-col items-center gap-4 justify-center mt-10 lg:h-[14rem] lg:w-[15rem]">
-        <image
+        <img
           src=""
           alt=""
           className="content-fit lg:h-[7rem] h-10 w-10 lg:w-[7rem] rounded-full bg-sky-100"
-        ></image>
+        ></img>
         <h1 className="text-2xl hidden lg:flex ">Hi, Bhanu Prakash</h1>
       </div>
       <div className=" mt-[2rem]">
