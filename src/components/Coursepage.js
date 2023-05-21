@@ -218,7 +218,7 @@ function Coursepage() {
     // alert(course._id);
     try {
       var res = await axios.get(
-        `http://localhost:5000/user/course/enrollement/${course._id}`,
+        `https://edubite-course-backend.vercel.app/user/course/enrollement/${course._id}`,
         { headers: { "x-access-token": `${localStorage.getItem("token")}` } }
       );
       console.log(res);

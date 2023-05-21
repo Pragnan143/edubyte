@@ -7,7 +7,9 @@ const CourseCard = (props, c) => {
 
   function reshit(id) {
     if (c === "enrolled") {
-      axios.get(`https://edubite-course-backend.vercel.app/user/login`);
+      // axios.get(`https://edubite-course-backend.vercel.app/user/login`);
+      alert("THIS COURSE WILL STARTED AFTER JUNE 15")
+    
     } else {
         navigate('/course/'+id)
         // console.log(id)
