@@ -9,9 +9,9 @@ const SignUpPage = () => {
   const [uname, setUsername] = React.useState("");
   const [email, setemail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  console.log(uname);
-  console.log(email);
-  console.log(password);
+  // console.log(uname);
+  // console.log(email);
+  // console.log(password);
 
   // const onOpenModal = () => setOpen(true);
   // const onCloseModal = () => setOpen(false);
