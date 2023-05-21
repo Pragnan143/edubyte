@@ -1,4 +1,4 @@
-import { CreditCard } from "@mui/icons-material";
+import { CheckBox, CreditCard } from "@mui/icons-material";
 import React from "react";
 const Checkoutpage = () => {
   return (
@@ -47,12 +47,16 @@ const Checkoutpage = () => {
           </div>
           <div className="flex flex-col gap-2 w-[13.85rem] text-violet-500 ">
             <p>Have a coupon code ?</p>
-            <input
-              type="text"
-              placeholder="Coupon Code "
-              className=" h-6 p-1 w-full font-light text-md text-black border-violet-200 border-2  "
-            />
+            <div className="flex gap-3  ">
+              <input
+                type="text"
+                placeholder="Coupon Code "
+                className=" h-6 p-1 w-3/4 font-light text-md text-black border-violet-200 border-2  "
+              />
+              <button className="h-6 w-1/4 pointer font-normal text-sm  ">Apply</button>
+            </div>
           </div>
+
           <button className="w-[16rem] flex gap-5 items-center justify-center h-[3.5rem] rounded-md  bg-violet-800 ">
             <CreditCard /> Pay Now
           </button>
